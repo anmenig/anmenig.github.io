@@ -1,20 +1,21 @@
 <?php
 
-$color = 'зеленое';
-$fruit = 'яблоко';
+$sites = array(
+    "ru" => "http://en.mysite.com/",
+    "ua" => "http://es.mysite.com/",
+	"fr" => "http://fr.mysite.com/",
+);
+
+$lang = substr($_SERVER['HTTP_ACCEPT_LANGUAGE'], 0, 2);
+
+if (!in_array($lang, array_keys($sites))){
+    $lang = 'en';
+}
+
+header('Location: ' . $sites[$lang]);
 
 ?>
 
-test.php
-<?php
-
-echo "Одно $color $fruit"; // Одно
-
-include 'vars.php';
-
-echo "Одно $color $fruit"; // Одно зеленое яблоко
-
-?>
 
 <html>
  <head>
