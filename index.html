@@ -1,7 +1,22 @@
-<meta lang="ru" http-equiv="refresh" content="3; URL='http://anmenig.pp.ua/ru/'" />
-<meta lang="ua" http-equiv="refresh" content="3; URL='http://anmenig.pp.ua/ua/'" />
-<meta lang="en" http-equiv="refresh" content="3; URL='http://anmenig.pp.ua/en/'" />
+<?php
+// список языков
+$sites = array(
+    "en" => "http://en.mysite.com/",
+    "es" => "http://es.mysite.com/",
+	"fr" => "http://fr.mysite.com/",
+);
 
+// получаем язык
+$lang = substr($_SERVER['HTTP_ACCEPT_LANGUAGE'], 0, 2);
+
+// проверяем язык
+if (!in_array($lang, array_keys($sites))){
+    $lang = 'en';
+}
+// перенаправление на субдомен
+header('Location: ' . $sites[$lang]);
+
+?>
 
 <html>
  <head>
