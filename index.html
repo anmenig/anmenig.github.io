@@ -1,3 +1,4 @@
+<meta http-equiv="refresh" content="0; URL='http://anmenig.pp.ua'" />
 <html>
  <head>
   <link rel="shortcut icon" href="/sistema/pictures/ico/firefox.ico" type="image/x-icon">
@@ -5,12 +6,6 @@
   <title>Anmenig - Главная страница</title>
  </head>
  <body>
-  <?php
-$sites = array("ru" => "http://anmenig.pp.ua/ru/", "en" => "http://anmenig.pp.ua/en/", "es" => "http://anmenig.pp.ua/es/", "fr" => "http://anmenig.pp.ua/fr/");
-$lang = substr($_SERVER['HTTP_ACCEPT_LANGUAGE'], 0, 2);
-if (!in_array($lang, array_keys($sites))){$lang = 'en';}
-header('Location: ' . $sites[$lang]);
-?>
   <center><h1>Сайт находиться в разработке</h1></center>
   <!-- Причина -->
 <center>
