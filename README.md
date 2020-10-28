@@ -4,7 +4,7 @@
 
 
 <script language="JavaScript"> window.location.href = "https://b.amng.ml/" </script>
-<m eta http-equiv="refresh" content="0;https://b.amng.ml/">
+meta http-equiv="refresh" content="0;https://b.amng.ml/"
 <title>Anmenig</title>
 
 <link rel="apple-touch-icon" sizes="180x180" href="a/files/images/ico/apple-touch-icon.png">
